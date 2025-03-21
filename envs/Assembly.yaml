@@ -1,0 +1,7 @@
+# Shovill assembly
+name: assembly
+channels:
+ - conda-forge
+ - bioconda
+dependencies:
+ - shovill

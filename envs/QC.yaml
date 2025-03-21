@@ -1,0 +1,19 @@
+# This is a configuration file for conda to 
+# create an environment called coure_env
+# with the following dependencies.
+
+
+# Define the name of the environment
+name: course_env
+# Define the channels to use
+channels:
+ - conda-forge
+ - bioconda
+# My dependencies
+dependencies:
+ - fastqc
+ - quast
+ - multiqc
+
+ # When you are done, save the file and run the following command:
+ # conda env create -f name_yaml.yaml -n env_name
