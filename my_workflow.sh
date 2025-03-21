@@ -5,6 +5,9 @@ read1=$1
 read2=$2
 outdir=$3
 
+echo "Input read files: $read1, $read2"
+echo "Output directory: $outdir"
+
 # Check if data files exist before downloading
 if [ ! -f "Dataset/ERR14229040_1.fastq.gz" ] || [ ! -f "Dataset/ERR14229040_2.fastq.gz" ]; then
   bash my_scripts/download_data.sh
