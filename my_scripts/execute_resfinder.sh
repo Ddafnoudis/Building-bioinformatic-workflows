@@ -12,8 +12,12 @@ echo "Output Directory: $output_dir"
 echo "Database Directory: $database_dir"
 
 # Variables
-sample=$(basename $read1 _R1.fastq.gz)
+sample=$(basename $read1 _1.fastq.gz)
 outdir=$output_dir/ResFinder/$sample
 db_dir=$database_dir/resfinder_db
 
+# Create the output directory
+mkdir -p $outdir
+
+# Run ResFinder
 mamba run -n cge_env run_resfinder.py -ifq $read1 $read2 -o $outdir -db_res $db_dir -db_res_kma $db_dir --acquired

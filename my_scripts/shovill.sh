@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# Define the variables
-read1=Dataset/*_1.fastq.gz*
-read2=Dataset/*_2.fastq.gz*
-output_dir=Results/shovill
+# Automatically detect input files
+read1=$1
+read2=$2
+output_dir=$3
 
-# Create the output directory 
-mkdir -p $output_dir
-
+# Run Shovill
 mamba run -n assembly shovill --trim ON --R1 $read1 --R2 $read2 --outdir $output_dir --force
