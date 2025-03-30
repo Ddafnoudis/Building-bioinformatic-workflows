@@ -19,6 +19,14 @@ conda create -f <yaml_name>.yml -n <env_name>
  conda search <pagkage_name> -c bioconda 
  ```
 
+#### Remove virtual environments created from yaml files
+
+You need to type the *-p* that specifies a path, and the full path of the virtual environment
+```bash
+conda remove -p /envs/env_name --all
+```
+
+
  ### Key takeaways
 
  1) Create different environments and install packages using yaml files.
