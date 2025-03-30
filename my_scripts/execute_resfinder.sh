@@ -16,6 +16,8 @@ sample=$(basename $read1 _1.fastq.gz)
 outdir=$output_dir/ResFinder/$sample
 db_dir=$database_dir/resfinder_db
 
+echo "Database Directory: $db_dir"
+
 # Create the output directory
 mkdir -p $outdir
 
